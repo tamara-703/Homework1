@@ -178,9 +178,82 @@ for(let rand = 0; rand <= 20; rand++)
 //  Find the Median
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 
-let median = Math.floor(nums.length / 2);
+nums.sort(); //sort from shorter to longer to get 15 as median
+let median = Math.floor(nums.length / 2); //use floor to round to the lower num instead of ciel which will round to the higher num
 
 console.log(nums[median]);
+
+//Return of the closets
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+  //1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+  let kristynShoe = "";
+
+  for(let i = 0; i < kristynsCloset.length; i++)
+  {
+    if(kristynsCloset[i] === 'left shoe')
+    {
+        kristynShoe = kristynsCloset[i];
+    }
+  }
+
+//   console.log(thomsCloset[0][9] + "\n************")
+
+thomsCloset[2].push(kristynShoe)
+
+//display thom's closet
+for(let i = 0; i < thomsCloset.length; i++)
+{
+    for(let j = 0; j < thomsCloset[i].length; j++)
+    {
+        console.log(thomsCloset[i][j]);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Fibonacci
 
