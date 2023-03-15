@@ -1,4 +1,4 @@
-//Hamster
+//Hamster class
 class Hamster{
     constructor(name)
     {
@@ -23,6 +23,7 @@ class Hamster{
     }
 }
 
+//Person class
 class Person{
     constructor(name)
     {
@@ -131,7 +132,7 @@ class Chef {
         this.appetizer = appetizer;
         this.entree = entree;
         this.dessert = dessert;
-        this.dinnerList = [];
+        this.dinnerList = []; //keep a list of dinners
     }
 
     generateDinner()
@@ -158,9 +159,9 @@ class Chef {
 
 let dinner1 = new Chef("Mozzerela sticks","Steak","Soufle");
 let dinner2 = new Chef("crabs sticks","cheeseburger","dark chocolate cake");
+let dinner3 = new Chef("cheese curds","Alfredo pasta","strawberry cake");
 dinner1.generateDinner();
 dinner2.generateDinner();
+dinner3.generateDinner();
+
 console.log(dinner2.getDinner(0));
-
-
-
