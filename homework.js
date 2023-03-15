@@ -156,7 +156,22 @@ console.log(whereIsWaldo);
 
 ////////////////////////////////
 //  Excited Kitten
-////////////////////////////////
+let theCatTalks = ["..human...why you taking pictures of me?...","...the catnip made me do it...","...why does the red dot always get away..."]
+
+for(let rand = 0; rand <= 20; rand++)
+{
+    let meow = Math.floor(Math.random() * theCatTalks.length);
+
+    if(rand % 2 == 0)
+    {
+        console.log("Is even");
+        console.log(theCatTalks[meow]);
+    } else
+    {
+        console.log("Is odd");
+        console.log("Meow");
+    }
+}
 
 
 ////////////////////////////////
