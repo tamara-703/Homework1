@@ -66,13 +66,66 @@ wolfy[0] = "Gameboy";
 
 ////////////////////////////////
 // Yell at the Ninja Turtles
+let ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
 
+for(element of ninjaTurtles)
+{
+    console.log(element.toUpperCase());
+}
 
 
 
 ////////////////////////////////
 // Methods, Revisited
-////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+for(let count = 0; count < favMovies.length; count++)
+{
+    if(favMovies[count] === 'Titanic')
+    {
+        console.log(favMovies[count]);
+    }
+}
+
+//sort the array in alphabatical order
+favMovies.sort();
+console.log(favMovies);
+
+//remove last element of the array
+favMovies.pop();
+
+//add new element to the end of the array
+favMovies.push("Guardians of the Galaxy");
+
+//display the array from last to first element
+favMovies.reverse();
+console.log(favMovies);
+
+//remove the first element of the array
+favMovies.shift();
+
+//add an element to the beginning of the array
+favMovies.unshift("Joker");
+console.log(favMovies);
+
+for(let fav = 0; fav < favMovies.length; fav++)
+{
+    if(favMovies[fav] === 'Django Unchained')
+    {
+        favMovies.splice(fav,1,'Avatar');
+    }
+}
+
+console.log(favMovies);
+
+let slicedArray = [];
+let halfOfArray = Math.ceil(favMovies.length / 2);
+
+
+slicedArray = favMovies.slice(halfOfArray);
+
+console.log(slicedArray);
+
 
 
 ////////////////////////////////
