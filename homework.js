@@ -181,3 +181,29 @@ const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,
 let median = Math.floor(nums.length / 2);
 
 console.log(nums[median]);
+
+//Fibonacci
+
+
+//recursive
+function fib(n) {
+
+    let arr = [0,1];
+
+    for(let i = 2; i < n + 1; i++)
+    {
+        arr.push(arr[i-2] + arr[i-1])
+    }
+
+    if(n < 2)
+    {
+        return n;
+    }
+
+    return fib(n-1) + fib(n-2);
+
+}
+
+let recur = fib(7);
+
+console.log(recur);
