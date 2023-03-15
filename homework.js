@@ -19,7 +19,22 @@ for(let count = 0; count <= 200; count++)
 
 ////////////////////////////////
 // Fizz Buzz
-////////////////////////////////
+for(let fizbuz = 1; fizbuz <= 100; fizbuz++)
+{
+    if(fizbuz % 3 == 0 && fizbuz % 5 == 0)
+    {
+        console.log("FizzBuzz");
+    } else if (fizbuz % 3 == 0 && fizbuz % 5 !== 0)
+    {
+        console.log("Fizz")
+    } else if (fizbuz % 5 == 0 && fizbuz % 3 !== 0)
+    {
+        console.log("Buzz")
+    } else
+    {
+        console.log(fizbuz);
+    }
+}
 
 
 ////////////////////////////////
