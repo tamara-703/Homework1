@@ -39,12 +39,35 @@ for(let fizbuz = 1; fizbuz <= 100; fizbuz++)
 
 ////////////////////////////////
 // Wild Wild Life
-////////////////////////////////
+const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"];
+const sharky = ["Sharky", "shark", 20, "Left Coast"];
+const plantee = ["Plantee", "plant",  5000 , "Mordor"];
+const porgee = ["Porgee", "Porg", 186, "Ahch-To"];
+const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"];
 
+//1. Change Plantee's age to reflect her being a year older
+for(let i = 0; i < plantee.length; i++)
+{
+    if(plantee[i] === 5000)
+    {
+        plantee[i] += 1;
+        console.log(`Plantee is now ${plantee[i]} years old.`);
+    }
+}
+
+//2. Change Wolfy's hometown from "Yukon Territory" to "Gotham City"
+wolfy[3] = "Gotham City";
+
+//3. Give D'Art a second hometown by adding "Hawkins"
+dart.push("Hawkins");
+
+//4. Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the wolfyarray and replace it with "Gameboy".
+wolfy[0] = "Gameboy";
 
 ////////////////////////////////
 // Yell at the Ninja Turtles
-////////////////////////////////
+
+
 
 
 ////////////////////////////////
