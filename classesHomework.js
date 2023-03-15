@@ -106,3 +106,61 @@ while(keepCount > 0)
 }
 
 newPerson.buyHamster(newHamster);
+
+
+//Chef and dinner
+
+class Dinner {
+    constructor(appetizer,entree,dessert)
+    {
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+
+    makeDinner()
+    {
+        console.log(`Tonight's dinner\nAppetizer:${this.appetizer}\nEntree:${this.entree}\nDessert:${this.dessert}`);
+    }
+
+}
+
+class Chef {
+    constructor(appetizer,entree,dessert)
+    {
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+        this.dinnerList = [];
+    }
+
+    generateDinner()
+    {
+        let newDinner = new Dinner(this.appetizer,this.entree,this.dessert);
+        this.dinnerList.push(newDinner);
+
+        newDinner.makeDinner();
+
+    }
+
+    getDinner(index)
+    {
+        if(index <= this.dinnerList.length)
+        {
+            return this.dinnerList[index];
+        } else{
+            console.log("We don't have that dinner on our list. Sorry!")
+        }
+
+    }
+
+}
+
+let dinner1 = new Chef("Mozzerela sticks","Steak","Soufle");
+let dinner2 = new Chef("crabs sticks","cheeseburger","dark chocolate cake");
+dinner1.generateDinner();
+dinner2.generateDinner();
+console.log(dinner2.getDinner(0));
+
+
+
